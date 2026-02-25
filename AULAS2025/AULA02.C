@@ -1,18 +1,23 @@
 #include <stdio.h>
-
+ //Caixa de Loja
 int main(){
 
-    int idade;
+    int valorDigitado;
+    int soma = 0;
 
-    printf("Digite sua idade??");
-    scanf("%i", &idade);
+    printf("Digite um número para somar: (Digite 0 para parar)");
 
-    if(idade >= 18){
-        printf("Maior de idade!!");
-    }
-    else{
-        printf("Menor de idade!!!");
-    }
+    do
+    {
+        printf("Digite um número: ");
+        scanf("%i", &valorDigitado);
+
+        soma += valorDigitado;
+        
+
+    } while (valorDigitado != 0);
+    
+    printf("A soma dos valore digitados são %i", soma);
 
     return 0;
 }
