@@ -1,25 +1,24 @@
 #include <stdio.h>
 
-int main(){
+int main() {
+    int n, i;
+    int vetor[n];
 
-    int i;
-    float valor1[4], valor2[4], sub1[4];
+    printf("Quantos numeros voce deseja inserir? ");
+    scanf("%d", &n);
 
-    for (i = 0; i < 4; i++){
-
-        printf("Digite um número da posição: [%i]\n", i);
-        scanf("%f", &valor1[i]);
-
-        printf("Digite um número da posição: [%i]\n", i);
-        scanf("%f", &valor2[i]);
-
-        sub1[i] = valor1[i] - valor2[i];
-
+    printf("Digite %d numeros:\n", n);
+    for(i = 0; i < n; i++) {
+        printf("Elemento %d: ", i + 1);
+        scanf("%d", &vetor[i]);
     }
 
-    for ( i = 0; i < 4; i++){
-     printf("O resultado da subtração dos vetores é: %.3f \n", sub1[i]);   
+    // Apresentando os dados na ordem inversa
+    printf("\nOs numeros na ordem inversa sao:\n");
+    for(i = n - 1; i >= 0; i--) {
+        printf("%d ", vetor[i]);
     }
+    printf("\n");
 
     return 0;
 }
