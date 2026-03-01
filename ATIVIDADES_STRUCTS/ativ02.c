@@ -14,7 +14,6 @@ int main()
     struct jogo jogos[5];
     int i;
 
-    // Leitura dos dados dos 5 jogos
     for (i = 0; i < 5; i++)
     {
         
